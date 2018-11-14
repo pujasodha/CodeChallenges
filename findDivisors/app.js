@@ -12,6 +12,24 @@ function divisors(integer) {
     
 };
 
+function divisors2(integer) {
+    
+    let array = [], i;
+
+    for(i = 2; i <= (integer -1); i+=1) {
+        if((integer % i) === 0) {
+            array.push(i);
+        }
+    }
+
+    if (array.length === 0){
+        return `${integer} is prime`;
+    } else {
+        return array;
+    }
+}
+
+console.log(divisors2(25));
 
 // sample Tests
 // Test.assertDeepEquals(divisors(15), [3, 5]);
