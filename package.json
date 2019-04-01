@@ -1,0 +1,25 @@
+{
+  "name": "codechallenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan89tran/CodeChallenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryan89tran/CodeChallenges/issues"
+  },
+  "homepage": "https://github.com/bryan89tran/CodeChallenges#readme",
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  },
+  "dependencies": {
+    "jest": "^24.5.0"
+  }
+}
