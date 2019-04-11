@@ -5,7 +5,7 @@
  * @return {Number} 
  */
 
-function squareDigits(num){
+const squareDigits = function(num){
   let string = num.toString();
   let i, rtnString = "";
   
@@ -17,4 +17,5 @@ function squareDigits(num){
   
 }
 
-console.log(squareDigits(9119));
+// console.log(squareDigits(9119));
+module.exports = squareDigits;
