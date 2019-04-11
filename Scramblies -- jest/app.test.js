@@ -1,3 +1,7 @@
+/**
+ * CD into folder
+ * $ npm run test
+ */
 const scramble = require("./app");
 
 describe("Scramble", function () {

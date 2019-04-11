@@ -12,14 +12,19 @@ const scramble = function (str1, str2) {
     }
     let i, bool = true;
     const string1 = str1.split("");
-    for (i = 0; i < str2.length; i += 1) {
-        let index = string1.indexOf(str2[i]);
-        if (index === -1) {
-            bool = false;
-            break;
-        } else {
-           string1.splice(index, 1);
+    for (i = 0; i < str2.length; i+=1) {
+        let j;
+        for (j = 0; j < string1.length; j+=1) {
+            if(str2[i] === string1[j]) {
+                string1.splice(j, 1);
+                break;
+            }
+            
+            if(j === (string1.length - 1)) {
+                return false;
+            }
         }
+
     }
 
     return bool;
@@ -29,7 +34,7 @@ const scramble = function (str1, str2) {
 
 // console.log(scramble("katas", "steak"));    // false
 // console.log(scramble("rkqodlw", "world"));  // true
-console.log(scramble("asynoymabbcamaomsccdd", "synonym"));  // false
+// console.log(scramble("asynoymabbcamaomsccdd", "synonym"));  // false
 module.exports = scramble;
 
 // Attempts
@@ -42,6 +47,33 @@ module.exports = scramble;
  * time though this issue is caused by inefficient algorithms. If you see 
  * this error multiple times you should try to optimize your code further.
  * 
+ */
+
+ /**
+    if (str2.length > str1.length || str1 === "" || str2 === "") {
+        return false;
+    }
+    let i, bool = true;
+    const string1 = str1.split("");
+    for (i = 0; i < str2.length; i+=1) {
+        let j;
+        for (j = 0; j < string1.length; j+=1) {
+            if(str2[i] === string1[j]) {
+                string1.splice(j, 1);
+                break;
+            }
+            
+            if(j === (string1.length - 1)) {
+                return false;
+            }
+        }
+
+    }
+
+    return bool;
+  */
+
+/**
     
     if (str2.length > str1.length || str1 === "" || str2 === "") {
         return false;
